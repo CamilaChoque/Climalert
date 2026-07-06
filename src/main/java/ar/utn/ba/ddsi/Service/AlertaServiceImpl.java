@@ -1,4 +1,4 @@
-package ar.utn.ba.ddsi;
+package ar.utn.ba.ddsi.Service;
 
 import ar.utn.ba.ddsi.models.RegistroClimatico;
 import ar.utn.ba.ddsi.models.TipoAlerta;
@@ -9,7 +9,7 @@ public class AlertaServiceImpl implements AlertaService {
 
     public TipoAlerta verificarCondiciones(RegistroClimatico registro){
         climaRepository.guardar(registro);
-        if(registro.getTemperatura()>35 && registro.getHumedad()>35){
+        if(registro.getTemperatura()>35 && registro.getHumedad()>60){
             procesarAlerta(TipoAlerta.ROJO,"Advertencia: se registra condición crítica climática");
             return TipoAlerta.ROJO;
         }
