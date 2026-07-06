@@ -27,9 +27,9 @@ public class ClimaInMemoryStore {
         private String id;
         private LocalDateTime fecha;
         private Double temperatura;
-        private Double humedad;
+        private int humedad;
 
-        private ClimaModel(String id,LocalDateTime fecha, Double temperatura, Double humedad) {
+        private ClimaModel(String id,LocalDateTime fecha, Double temperatura, int humedad) {
             this.id=id;
             this.fecha=fecha;
             this.temperatura=temperatura;

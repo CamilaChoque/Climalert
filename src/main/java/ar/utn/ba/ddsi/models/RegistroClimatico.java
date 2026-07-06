@@ -13,15 +13,15 @@ public class RegistroClimatico {
     @Getter
     private Double temperatura;
     @Getter
-    private Double humedad;
+    private int humedad;
 
-    public RegistroClimatico(LocalDateTime fecha,Double temperatura, Double humedad) {
+    public RegistroClimatico(LocalDateTime fecha,Double temperatura, int humedad) {
         this.id= UUID.randomUUID().toString();
         this.humedad = humedad;
         this.temperatura = temperatura;
         this.fecha = fecha;
     }
-    public RegistroClimatico(String id,LocalDateTime fecha,Double temperatura, Double humedad) {
+    public RegistroClimatico(String id,LocalDateTime fecha,Double temperatura, int humedad) {
         this.id=id;
         this.humedad = humedad;
         this.temperatura = temperatura;
