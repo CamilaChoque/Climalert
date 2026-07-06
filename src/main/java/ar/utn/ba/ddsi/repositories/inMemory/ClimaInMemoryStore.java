@@ -3,16 +3,22 @@ package ar.utn.ba.ddsi.repositories.inMemory;
 import ar.utn.ba.ddsi.models.RegistroClimatico;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ClimaInMemoryStore {
-    private final Map<String, ClimaModel> climas = new LinkedHashMap<>();
+    private final List<ClimaModel> climas = new ArrayList<>();
 
     public RegistroClimatico guardar(RegistroClimatico clima) {
         ClimaModel model = toModel(clima);
-        climas.put(model.id, model);
+        climas.add(model);
         return toDomain(model);
+    }
+    public RegistroClimatico obtenerUltimo(){
+        return toDomain(climas.getLast());
+
     }
     private ClimaModel toModel(RegistroClimatico clima) {
         return new ClimaModel(
