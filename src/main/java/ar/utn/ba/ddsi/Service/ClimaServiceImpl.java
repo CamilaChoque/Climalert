@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class ClimaServiceImpl implements ClimaService{
     private final RestTemplate restTemplate = new RestTemplate();
 
-    @Value("$weather.api.url")
+    @Value("{$weather.api.url}")
     private String urlBase;
 
     @Value("${weather.api.key}")
@@ -25,7 +25,7 @@ public class ClimaServiceImpl implements ClimaService{
     public RegistroClimatico obtenerClimaActual(){
         String urlCompleta = String.format("%s?key=%s&q=%s", urlBase, apiKey, ubicacion);
         try {
-            ClimaResponse response = restTemplate.getForObject(urlCompleta, ClimaResponse.class);
+            ClimaResponse response = restTemplate.getForObject(urlCompleta, ClimaResponse.class); //se pise el resposnse
 
             if (response != null && response.current() != null) {
                 CurrentResponse currentResponse = response.current();
