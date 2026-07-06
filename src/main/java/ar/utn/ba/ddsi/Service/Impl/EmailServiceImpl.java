@@ -2,6 +2,7 @@ package ar.utn.ba.ddsi.Service.Impl;
 
 import ar.utn.ba.ddsi.Service.EmailService;
 import ar.utn.ba.ddsi.models.RegistroClimatico;
+import ar.utn.ba.ddsi.repositories.EmailRepository;
 
 public class EmailServiceImpl implements EmailService {
     private final EmailRepository emailRepository;

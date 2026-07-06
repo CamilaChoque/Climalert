@@ -4,9 +4,7 @@ import ar.utn.ba.ddsi.models.RegistroClimatico;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ClimaInMemoryStore {
     private final List<ClimaModel> climas = new ArrayList<>();
