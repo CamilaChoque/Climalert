@@ -1,5 +1,6 @@
-package ar.utn.ba.ddsi.Service;
+package ar.utn.ba.ddsi.Service.Impl;
 
+import ar.utn.ba.ddsi.Service.AlertaService;
 import ar.utn.ba.ddsi.models.RegistroClimatico;
 import ar.utn.ba.ddsi.models.TipoAlerta;
 import ar.utn.ba.ddsi.repositories.ClimaRepository;

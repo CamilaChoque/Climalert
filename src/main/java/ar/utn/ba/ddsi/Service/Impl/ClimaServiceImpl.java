@@ -1,5 +1,6 @@
-package ar.utn.ba.ddsi.Service;
+package ar.utn.ba.ddsi.Service.Impl;
 
+import ar.utn.ba.ddsi.Service.ClimaService;
 import ar.utn.ba.ddsi.dto.ClimaResponse;
 import ar.utn.ba.ddsi.dto.CurrentResponse;
 import ar.utn.ba.ddsi.models.RegistroClimatico;
@@ -10,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.time.LocalDateTime;
 
 @Service
-public class ClimaServiceImpl implements ClimaService{
+public class ClimaServiceImpl implements ClimaService {
     private final RestTemplate restTemplate = new RestTemplate();
 
     @Value("{$weather.api.url}")
