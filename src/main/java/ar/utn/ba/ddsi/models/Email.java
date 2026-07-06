@@ -31,4 +31,12 @@ public class Email {
         this.email = email;
     }
 
+    public void recibirAlerta(String asunto, String detalle) {
+        System.out.println("Mensaje enviado");
+
+        System.out.println("📌 Asunto: ⚠️ " + asunto);
+        System.out.println("📝 Detalle:\n" + detalle);
+        System.out.println("--------------------------------------------------");
+    }
+
 }
